@@ -6,10 +6,13 @@ import isAsyncSupported from 'is-async-supported';
 import chalk from 'chalk';
 import updateNotifier from 'update-notifier';
 
+import Gettext from 'node-gettext';
 import { player as playerCommand, game as gameCommand } from './command';
 import { error, bold, nbaRed, neonGreen } from './utils/log';
 
 import pkg from '../package.json';
+
+import spanishTranslations from './translations/es-ES.json';
 
 if (!isAsyncSupported()) {
   require('async-to-gen/register');
@@ -118,31 +121,39 @@ program
     gameCommand(option);
   });
 
+const gt = new Gettext();
+gt.addTranslations('es-ES', 'messages', spanishTranslations);
+gt.setLocale('es-ES');
+
 program.on('--help', () => {
   console.log('');
   console.log('');
   console.log(
-    `  Welcome to ${chalk`{bold.hex('#0069b9') NBA}`} ${nbaRed('GO')} !`
+    `${gt.gettext('  Welcome to ')}${chalk`{bold.hex('#0069b9') NBA}`} ${nbaRed(
+      'GO'
+    )} !`
   );
   console.log('');
   console.log(
-    `  Wanna watch NBA game please enter: ${neonGreen('nba-go game')}`
+    `${gt.gettext('  Wanna watch NBA game please enter: ')}${neonGreen(
+      'nba-go game'
+    )}`
   );
   console.log(
-    `  Wanna check NBA player information please enter: ${neonGreen(
-      'nba-go player <name>'
-    )}`
+    `${gt.gettext(
+      '  Wanna check NBA player information please enter: '
+    )}${neonGreen('nba-go player <name>')}`
   );
   console.log('');
   console.log(
-    `  For more detailed information please check the GitHub page: ${neonGreen(
-      'https://github.com/xxhomey19/nba-go'
-    )}`
+    `${gt.gettext(
+      '  For more detailed information please check the GitHub page: '
+    )}${neonGreen('https://github.com/xxhomey19/nba-go')}`
   );
   console.log(
-    `  Or enter ${neonGreen('nba-go game -h')}, ${neonGreen(
+    `${gt.gettext('  Or enter ')}${neonGreen('nba-go game -h')}, ${neonGreen(
       'nba-go player -h'
-    )} to get more helpful information.`
+    )}${gt.gettext(' to get more helpful information.')}`
   );
   console.log('');
 });
