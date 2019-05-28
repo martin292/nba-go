@@ -1,0 +1,56 @@
+{
+
+  "headers": {
+    "Project-Id-Version": "spanish-NBAgo\n",
+    "Report-Msgid-Bugs-To": "\n",
+    "POT-Creation-Date": "2019-5-27 22:00\n",
+    "PO-Revision-Date": "2019-5-28 15:30\n",
+    "Last-Translator": "martin292\n",
+    "Language-Team": "martin292\n",
+    "MIME-Version": "1.0\n",
+    "Content-Type": "text/plain; charset=ASCII\n",
+    "Content-Transfer-Encoding": "8bit\n",
+    "Plural-Forms": "nplurals=2; plural=(n != 1);\n"
+  },
+
+  "translations": {
+    "": {
+      "": {
+        "msgid": "",
+        "comments": {"translator": "aaaaa"},
+        "msgstr": ["aaa"]
+      },
+      "  Welcome to ":{
+        "msgid": "  Welcome to ",
+        "comments": {"translator": "Normal string"},
+        "msgstr": ["  Bienvenido a "]
+      },
+      "  Wanna watch NBA game please enter: ":{
+        "msgid": "  Wanna watch NBA game please enter: ",
+        "comments": {"translator": "Normal string"},
+        "msgstr": ["  ¿Queres ver un partido de la NBA? por favor ingresar: "]
+      },
+      "  Wanna check NBA player information please enter: ":{
+        "msgid": "  Wanna check NBA player information please enter: ",
+        "comments": {"translator": "Normal string"},
+        "msgstr": ["  ¿Queres checkear la informacion de un jugador de la NBA? por favor ingresar: "]
+      },
+      "  For more detailed information please check the GitHub page: ":{
+        "msgid": "  For more detailed information please check the GitHub page: ",
+        "comments": {"translator": "Normal string"},
+        "msgstr": ["  Para mas informacion por favor checkear la pagina de GitHub: "]
+      },
+      "  Or enter ":{
+        "msgid": "  Or enter ",
+        "comments": {"translator": "Normal string"},
+        "msgstr": ["  O ingresar "]
+      },
+      " to get more helpful information.":{
+        "msgid": " to get more helpful information.",
+        "comments": {"translator": "Normal string"},
+        "msgstr": [" para obtener mas informacion."]
+      }
+    }
+  }
+
+}
